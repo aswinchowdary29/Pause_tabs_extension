@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; padding: 15px; font-family: 'Segoe UI', sans-serif; }
+    h2 { margin-top: 0; color: #2c3e50; font-size: 1.2rem; }
+    
+    .input-group { display: flex; gap: 5px; margin-bottom: 15px; }
+    input[type="text"] { flex: 2; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    input[type="number"] { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    
+    button#add { background-color: #0078d4; color: white; border: none; cursor: pointer; padding: 8px 15px; border-radius: 4px; }
+    button#add:hover { background-color: #005a9e; }
+
+    ul { list-style: none; padding: 0; margin-top: 10px; border-top: 1px solid #eee; }
+    li { padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+    
+    .site-info { display: flex; flex-direction: column; }
+    .site-name { font-weight: bold; font-size: 1rem; color: #333; }
+    .site-stats { font-size: 0.85rem; color: #666; margin-top: 3px; }
+    
+    .delete-btn { 
+      color: #d9534f; cursor: pointer; font-weight: bold; 
+      padding: 5px 10px; border-radius: 4px; background: #fff0f0; 
+    }
+    .delete-btn:hover { background: #ffe0e0; }
+  </style>
+</head>
+<body>
+  <h2>Daily Limiter</h2>
+
+  <div class="input-group">
+    <input type="text" id="site" placeholder="youtube.com">
+    <input type="number" id="limit" placeholder="Min" min="1">
+  </div>
+  <button id="add" style="width: 100%">Add Rule</button>
+
+  <h3>Active Limits</h3>
+  <ul id="ruleList">
+    </ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
